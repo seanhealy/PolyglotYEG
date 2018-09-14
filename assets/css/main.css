@@ -113,7 +113,7 @@ header .pg-wheat .stock {
   top: 60px;
   width: 35px;
   height: 168px;
-  background-image: url("/images/wheat.png");
+  background-image: url("../../images/wheat.png");
   -webkit-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
@@ -122,10 +122,11 @@ header .pg-wheat .stock {
 header .mountains {
   position: absolute;
   top: 0px;
-  bottom: 100px;
+  bottom: 175px;
   left: 0px;
   right: 0px;
-  background-image: url("/images/mountains.png");
+  /* background-image: url("../../images/mountains.png"); */
+  background-image: url("../../images/yeg_skyline.png");
   -webkit-background-size: contain;
   background-size: contain;
   background-repeat: no-repeat;
