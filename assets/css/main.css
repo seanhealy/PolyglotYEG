@@ -47,6 +47,12 @@ h5 {
   font-weight: normal;
   font-size: 1em;
 }
+
+@media only screen and (max-width:768px){
+  li {
+    font-size: 1em;
+  }
+}
 .center {
   text-align: center;
 }
