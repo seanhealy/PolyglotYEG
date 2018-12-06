@@ -179,19 +179,19 @@ section .content {
 .talks-section .topic-list
 {
   display: block;
-  min-height: 240px;
+  min-height: 100px;
 }
 .talks-section .topic-list div:first-child
 {
   float: left;
   width: 50%;
-  min-height: 200px;
+  min-height: 100px;
 }
 .talks-section .topic-list div:last-child
 {
   float: right;
   width: 50%;
-  min-height: 200px;
+  min-height: 100px;
 }
 
 .schedule-section table{
