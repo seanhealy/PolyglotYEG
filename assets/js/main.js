@@ -47,8 +47,8 @@ angular.module('Polyglot').directive("pgTickets", function() {
   return {
     restrict: "EA",
     replace: true,
-//    template: "<center>\n  <a class=\"button\" onclick=\"showpass.tickets.eventPurchaseWidget('polyglot-yyc', {'theme-primary': '#dd3333', 'keep-shopping': false});return false;\" href=\"https://www.showpass.com/polyglot-yyc/\">Get Tickets Now</a>\n</center>"
-    template: "<center>\n  <a class=\"button\" href=\"\" disabled>Tickets Available: Friday, January 4th</a>\n</center>"
+    template: "<center>\n  <a class=\"button\" href=\"https://polyglotyeg.eventbrite.ca">Join the Waitlist</a>\n</center>"
+//     template: "<center>\n  <a class=\"button\" href=\"\" disabled>Tickets Available: Friday, January 4th</a>\n</center>"
 
   };
 });
