@@ -30,6 +30,9 @@
       }
     })(window, document, 'https://www.showpass.com/static/dist/sdk.js');
   </script>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
   <header>
@@ -100,6 +103,59 @@
       </div>
     </div>
   </pg-section>
+
+<pg-section>
+  <h1>Venue</h1>
+  <h4>NorQuest College</h4>
+  <center>
+    <a
+          class="button"
+          href="https://devedmonton-invite.herokuapp.com"
+          target="_blank"
+          style=""
+          ><i class="fab fa-slack-hash"></i> Join us on Slack</a>
+  </center>
+</pg-section>
+
+  <div id='map' class="map"></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2VhbmhlYWx5IiwiYSI6ImNqcWljbDlyZzAweDU0M2thamxybnZ3YWcifQ.P7DhdVBvPJsZmiUsMZScSg';
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/dark-v9',
+      center: [-113.505645, 53.54339],
+      zoom: 15,
+      interactive: false,
+    });
+
+    map.on('load', function() {
+      map.loadImage('https://polyglotyeg.com/images/map_icon.png', function(error, image) {
+          if (error) throw error;
+          map.addImage('icon', image);
+          map.addLayer({
+              "id": "points",
+              "type": "symbol",
+              "source": {
+                  "type": "geojson",
+                  "data": {
+                      "type": "FeatureCollection",
+                      "features": [{
+                          "type": "Feature",
+                          "geometry": {
+                              "type": "Point",
+                              "coordinates": [-113.505645, 53.54349],
+                          }
+                      }]
+                  }
+              },
+              "layout": {
+                  "icon-image": "icon",
+                  "icon-size": 0.36
+              }
+          });
+      });
+    });
+  </script>
 
   <pg-section>
     <h1>Who are we?</h1>
