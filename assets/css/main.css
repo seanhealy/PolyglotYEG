@@ -15,7 +15,7 @@ body {
   font-family: "sofia-pro", sans-serif;
   font-weight: 200;
   background-color: #f4f4f4;
-  line-height:1.5;
+  line-height: 1.5;
 }
 h1,
 h2,
@@ -48,7 +48,7 @@ h5 {
   font-size: 1em;
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width: 768px) {
   li {
     font-size: 1em;
   }
@@ -67,7 +67,7 @@ a:hover {
 a.button {
   display: inline-block;
   padding: 1rem 4rem;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   text-transform: uppercase;
@@ -76,15 +76,15 @@ a.button {
   background-color: #606060;
 }
 a.button:hover {
-  background-color: rgba(0,0,0,0.2);
-  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
   border-color: #606060;
 }
 header {
   text-align: center;
   border-bottom: solid 1px #fff;
   background-color: #fbdd70;
-  position:relative;
+  position: relative;
   padding: 8rem;
 }
 header h1,
@@ -95,7 +95,7 @@ header h2 {
 header h1 {
   padding-top: 170px;
   margin-bottom: 3rem;
-  font-size: 7em;
+  font-size: 5em;
   font-weight: 700;
 }
 header h2 {
@@ -141,9 +141,9 @@ header .mountains {
 }
 
 center {
-  position:relative;
-  z-index:10;
-  margin:8rem;
+  position: relative;
+  z-index: 10;
+  margin: 8rem;
 }
 section {
   padding: 10rem 8rem;
@@ -152,9 +152,27 @@ section {
 }
 section.yellow {
   background-color: #fbdd70;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.1)), color-stop(rgba(255,255,255,0.05)), color-stop(rgba(255,255,255,0.1)), to(rgba(0,0,0,0.05)));
-  background-image: -webkit-linear-gradient(rgba(0,0,0,0.1), rgba(255,255,255,0.05), rgba(255,255,255,0.1), rgba(0,0,0,0.05));
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(255,255,255,0.05), rgba(255,255,255,0.1), rgba(0,0,0,0.05));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0.1)),
+    color-stop(rgba(255, 255, 255, 0.05)),
+    color-stop(rgba(255, 255, 255, 0.1)),
+    to(rgba(0, 0, 0, 0.05))
+  );
+  background-image: -webkit-linear-gradient(
+    rgba(0, 0, 0, 0.1),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.05)
+  );
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.1),
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.05)
+  );
 }
 section .content {
   max-width: 960px;
@@ -177,51 +195,50 @@ section .content {
   background-position: center center;
 }
 
-.talks-section .topic-list
-{
+.talks-section .topic-list {
   display: block;
-  min-height: 100px;
+  min-height: 220px;
 }
-.talks-section .topic-list div:first-child
-{
+.talks-section .topic-list div:first-child {
   float: left;
   width: 50%;
   min-height: 100px;
 }
-.talks-section .topic-list div:last-child
-{
+.talks-section .topic-list div:last-child {
   float: right;
   width: 50%;
   min-height: 100px;
 }
 
-.schedule-section table{
+.schedule-section table {
   width: 100%;
+  text-align: left;
 }
 
-.schedule-section table tr td:first-child{
+.schedule-section table tr td:first-child {
   width: 20%;
   border-bottom: 1px dashed;
   text-align: center;
 }
-.schedule-section table tr td:last-child{
+.schedule-section table tr td:last-child {
   width: 80%;
   border-bottom: 1px dashed;
 }
 
 .sponsors {
   text-align: center;
-  font-size: 0;
   background-color: #fff;
 }
 
-
 .sponsors a {
-  display: inline-block;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: contain;
   background-size: contain;
+
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
 }
 .sponsors .gigabyte,
 .sponsors .megabyte,
@@ -229,26 +246,15 @@ section .content {
 .sponsors .byte {
   position: relative;
   border-top: solid 1rem transparent;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
 }
-.sponsors .gigabyte:before,
-.sponsors .megabyte:before,
-.sponsors .kilobyte:before,
-.sponsors .byte:before {
-  content: "";
-  display: block;
-  top: -1rem;
-  left: 0px;
-  right: 0px;
-  height: 1rem;
-  border-radius: 0.5rem;
-  background-color: #f4f4f4;
-}
-.sponsors .gigabyte:first-child:before,
-.sponsors .megabyte:first-child:before,
-.sponsors .kilobyte:first-child:before,
-.sponsors .byte:first-child:before {
-  display: none;
-}
+
 .sponsors .gigabyte:empty,
 .sponsors .megabyte:empty,
 .sponsors .kilobyte:empty,
@@ -256,10 +262,8 @@ section .content {
   display: none;
 }
 .sponsors .gigabyte a {
-  width: -webkit-calc(30% - 4rem);
-  width: calc(30% - 4rem);
   height: 150px;
-  margin: 2rem 4rem;
+  margin: 1rem 1rem;
 }
 .sponsors .megabyte a {
   width: 21%;
