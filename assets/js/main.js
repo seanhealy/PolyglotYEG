@@ -47,9 +47,8 @@ angular.module('Polyglot').directive("pgTickets", function() {
   return {
     restrict: "EA",
     replace: true,
-    template: "<center>\n  <a class=\"button\" href=\"https://polyglotyeg.eventbrite.ca\">Get Tickets</a>\n</center>"
-//     template: "<center>\n  <a class=\"button\" href=\"\" disabled>Tickets Available: Friday, January 4th</a>\n</center>"
-
+    // template: "<center>\n  <a class=\"button\" href=\"https://polyglotyeg.eventbrite.ca\">Get Tickets</a>\n</center>"
+    template: "<center>\n  <a class=\"button\" href=\"\" disabled>Tickets Available Soon</a>\n</center>"
   };
 });
 
